@@ -8,7 +8,7 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        aFunction(input,list);
+        aFunction(e);
     });
 });
 
@@ -16,7 +16,7 @@ buttons.forEach((button) => {
 
 
 
-function aFunction(input,list) {
+function aFunction() {
     //Get input from user
     const thisValue = input.textContent;
     input.textContent = "";
