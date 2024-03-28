@@ -6,30 +6,28 @@ const input = document.querySelectorAll("input");
 const buttons = document.querySelectorAll("button");
 
 
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        aFunction(e);
-    });
-});
 
-
-
-
-
-function aFunction() {
-    //Get input from user
-    const thisValue = input.textContent;
+    buttons.addEventListener("click", () => {
+        //Get input from user
+    const userInput = input.textContent;
     input.textContent = "";
     //Create three buttons
     const listItem = document.createElement("li");
-    const aSpan = document.createElement("span");
-    const anotherButton = document.createElement("button");
+    const foodName = document.createElement("span");
+    const deleteButton = document.createElement("button");
     //Add Button to 
-    listItem.append(aSpan, anotherButton);
+    listItem.append(foodName, deleteButton);
 
-    aSpan.textContent = thisValue;
-    anotherButton.textContent = "delete";
-    list.append(listItem);
+    foodName.textContent = userInput;
+    deleteButton.textContent = "Delete";
+    //Append new item to lists
+    list.appendChild(listItem);
 
-    anotherButton.addEventListener("click", list.removeChild(listItem));
-}
+    //remove Item from list
+    deleteButton.addEventListener("click",()=>{listItem.remove()} );
+
+        input.focus();
+    });
+
+
+
