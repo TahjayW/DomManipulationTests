@@ -1,16 +1,16 @@
 //Query selections for items
-const list = document.querySelectorAll("ul");
+const list = document.querySelector("ul");
 
-const input = document.querySelectorAll("input");
+const input = document.querySelector("input");
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelector("button");
 
 
 
     buttons.addEventListener("click", () => {
         //Get input from user
-    const userInput = input.textContent;
-    input.textContent = "";
+    const userInput = input.value;
+    input.value = "";
     //Create three buttons
     const listItem = document.createElement("li");
     const foodName = document.createElement("span");
